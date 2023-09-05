@@ -64,6 +64,12 @@ document.querySelector('#operator[data-value="+/-"]').addEventListener('click', 
     result.value = currentValue.toString();
 });
 
+document.querySelector('#operator[data-value="%"]').addEventListener('click', () => { 
+    let currentValue = parseFloat(result.value);
+    currentValue = currentValue / 100;
+    result.value = currentValue.toString();
+});
+
 resetButton.addEventListener('click', () => {
   result.value = '';
 });
