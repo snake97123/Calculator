@@ -1,8 +1,8 @@
 const result = document.querySelector('#result');
-const numButtons = document.querySelectorAll('.num');
-const operatorButtons = document.querySelectorAll('.operator');
+const numButtons = document.querySelectorAll('#num');
+const operatorButtons = document.querySelectorAll('#operator');
 const resetButton = document.querySelector('#reset');
-const equalButton = document.querySelector('.equal');
+const equalButton = document.querySelector('#equal');
 
 numButtons.forEach(button => {
   button.addEventListener('click', () => {
