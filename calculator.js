@@ -76,6 +76,12 @@ document.querySelector('#operator[data-value="%"]').addEventListener('click', ()
     result.value = currentValue.toString();
 });
 
+document.querySelector('#operator[data-value="."]').addEventListener('click', () => {
+    if(!result.value.includes('.')) {
+      result.value += '.';
+    }
+});
+
 resetButton.addEventListener('click', () => {
   result.value = '';
 });
