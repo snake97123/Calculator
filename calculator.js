@@ -6,9 +6,14 @@ const equalButton = document.querySelector('#equal');
 
 let storedValue = null;
 let currentOperator = null;
+let isNewCalculation = false;
 
 numButtons.forEach(button => {
   button.addEventListener('click', () => {
+    if(isNewCalculation) {
+      result.value = '';
+      isNewCalculation = false;
+    }
     result.value += button.getAttribute('data-value')
   });
 });
@@ -55,6 +60,7 @@ document.querySelector('#calculate').addEventListener('click', () => {
       }
       storedValue = null;
       currentOperator = null;
+      isNewCalculation = true;
     }
 });
 
