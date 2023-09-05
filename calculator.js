@@ -58,6 +58,12 @@ document.querySelector('#calculate').addEventListener('click', () => {
     }
 });
 
+document.querySelector('#operator[data-value="+/-"]').addEventListener('click', () => {
+    let currentValue = parseFloat(result.value);
+    currentValue = -currentValue;
+    result.value = currentValue.toString();
+});
+
 resetButton.addEventListener('click', () => {
   result.value = '';
 });
